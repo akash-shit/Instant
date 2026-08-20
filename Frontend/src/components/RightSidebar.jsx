@@ -73,15 +73,12 @@ const RightSidebar = () => {
                 />
 
                 <div className="flex items-center gap-2">
-
                     {onlineUsers.includes(selectedUser._id) && (
                         <span className="w-2 h-2 rounded-full bg-green-500"></span>
                     )}
-
                     <h1 className="text-2xl font-medium">
                         {selectedUser.fullName}
                     </h1>
-
                 </div>
 
                 <p className="text-center text-sm text-gray-300 max-w-[350px]">
@@ -97,21 +94,17 @@ const RightSidebar = () => {
 
             {/* Media */}
             <div className="px-5 pb-32">
-
                 <p className="text-sm font-medium mb-4">
                     Media
                 </p>
 
                 <div className="grid grid-cols-2 gap-3">
-
                     {msgImages.map((url, index) => (
-
                         <div
                             key={index}
                             onClick={() => window.open(url)}
                             className="cursor-pointer rounded-lg overflow-hidden"
                         >
-
                             <img
                                 src={url}
                                 alt=""
@@ -119,51 +112,15 @@ const RightSidebar = () => {
                             />
 
                         </div>
-
                     ))}
-
                 </div>
-
             </div>
 
 
             {/* Logout */}
             <button
                 onClick={logout}
-                className="
-                    absolute
-
-        bottom-5
-
-        left-1/2
-
-        -translate-x-1/2
-
-        bg-gradient-to-r
-
-        from-purple-400
-
-        to-violet-600
-
-        text-white
-
-        text-sm
-
-        font-medium
-
-        py-3
-
-        px-24
-
-        rounded-full
-
-        cursor-pointer
-
-        whitespace-nowrap
-
-         max-md:hidden
-                "
-            >
+                className=" absolute bottom-5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-purple-400 to-violet-600 text-white text-sm font-medium py-3 px-24 rounded-full cursor-pointer whitespace-nowrap max-md:hidden ">
                 Logout
             </button>
 
